@@ -1,6 +1,8 @@
+# Get movie preferences
 action_movie = input("Do you like action movies? (Yes/No)").lower() == 'yes'
 comedy_movie = input("Do you like comedy movies? (Yes/No)").lower() == 'yes'
 
+# Use boolean and logical operators
 if action_movie and not comedy_movie:
     movie_genre = "Action"
 elif comedy_movie and not action_movie:
@@ -10,6 +12,7 @@ else:
     movie_genre = "Unknown"
 
 
+# Print recommendations to the user.
 if movie_genre == "Action":
     print("Recommended action movies: 'Rocky', 'Fast and Furious' ")
 elif movie_genre == "Comedy":
