@@ -1,6 +1,6 @@
 import random
 
-random_number = random.randrange(1,100)
+random_number = random.randint(1,100)
 #Using single quote string
 print(f'The random number is {random_number}')
 #Using double quote string
