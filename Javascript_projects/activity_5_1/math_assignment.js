@@ -14,4 +14,4 @@ function mean(arr){
 let arrMean = mean(samples);
 //Round to two decimal places
 let roundedMean = Math.round(arrMean * 100) / 100
-console.log("The mean of the given sample is " + roundedMean + " to the nearest integer.");
+console.log("The mean of the given sample is " + roundedMean);
