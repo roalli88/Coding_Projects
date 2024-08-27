@@ -31,6 +31,7 @@ function updateList() {
         //Delete the current item when the delete button is clicked
         deleteButton.onclick = () => removeTask(index);
         //Add the next item that are not deleted to the TODO list
+        listItem.style.color = 'darkblue';
         listItem.append(task, ' ', deleteButton);
         //display the TODO list to the user
         toDoList.appendChild(listItem);
