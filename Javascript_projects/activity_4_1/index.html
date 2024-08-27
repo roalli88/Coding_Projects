@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 4.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <style>
+        #container{
+            margin: 50px auto;
+            width: 500px;
+            font-family: "Nerko One", sans-serif;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>TASK LIST</h1>
+        <label for="task-input">
+            <input type="text" name="task-input" id="task-input">
+        </label>
+        <button onclick="newTask()" id="btn" type="submit">Add</button>
+        <div>
+            <ul id="task-display">
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
