@@ -1,0 +1,534 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    scroll-padding-top: 70px;
+}
+:root{
+    --input-width : 100%;
+    --nav-background-color: rgb(228, 186, 186);
+    --footer-color: white;
+    --main-bg: rgb(248, 240, 240);
+    --text-color: black;
+    --button-bg-color: rgb(228, 186, 186);
+
+}
+
+
+/** Navigation menu styling **/
+#nav-container{
+    background-color: var(--nav-background-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-family: "Prata";
+
+}
+
+
+
+#nav-bar{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex: 4;
+    box-shadow: 2px 2px 2px rgb(138, 130, 130);
+    
+}
+
+#nav-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    
+}
+@media all and (min-width: 500px) {
+    #nav-bar ul{
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 2px;
+        margin-bottom: 0px;
+ 
+    }
+    #nav-bar{
+
+        flex: 1;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0;
+        
+    }
+    #nav-container{
+        
+        margin-bottom: 10px;
+        padding-top: 0;
+        min-height: 70px;
+        position: fixed;
+        top: 0;
+
+    }
+
+}
+
+#nav-bar li{
+    list-style-type: none;
+    margin-left: 20px;
+}
+#nav-bar a{
+    text-decoration: none;
+    font-family: "Prata", sans-serif;
+    line-height: 0.9;
+    padding: 15px 15px ;
+    text-align: center;
+    color: var(--text-color);
+}
+#nav-bar ul > a:hover{
+    border-bottom: 1px solid black;
+}
+
+
+#header-link{
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 15px;
+    align-self: center;
+    text-align: center;
+    height: 50px;
+    font-size: 1.2em;
+    text-align:center;
+    justify-content:flex-start;
+    align-content: center;
+    padding-top: 10px;
+    flex: 1;
+}
+
+@media all and (min-width:600px) {
+    #header-link{
+        font-size: 1.5rem;
+        text-align: left;
+        align-self: flex-start;
+        
+    }
+}
+
+
+/** End of Navigation menu styling **/
+
+
+/** Body styling **/ 
+body{
+    margin: 0 auto;
+    background-color: var(--main-bg);
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+@media all and (min-width : 600px){
+    body{
+        width: 100%;
+    }
+}
+
+
+
+/** End of Body styling **/
+
+
+
+
+/** Styling the header **/
+
+
+
+
+
+
+
+@media all and (min-width: 600px){
+    #title{
+        font-size: 1.5em;
+    }
+
+}
+
+.paws{
+    width: 0.9rem;
+}
+
+@media all and (min-width : 600px){
+    .paws{
+        width: 1.2rem;
+        height: 1.5rem;
+    }
+}
+
+
+/** End of styling the header **/
+
+
+/** Form styling **/ 
+
+#form-container {
+    padding: 10px;
+    margin: 2rem auto;
+    width: 90vw;
+    text-align: center;
+}
+
+@media all and (min-width :600px){
+    #form-container{
+        width:70%; 
+    }
+    .form-row button{
+        display: inline-block;
+        width: 100%;
+        color: var(--text-color);
+    }
+}
+
+@media all and (min-width :1020px){
+    #form-container{
+        width:60%; 
+
+    }
+    .form-row button{
+        float:left;
+    }
+}
+.form-row {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.form-row textarea {
+    height: 40%;
+}
+
+.form-row label{
+    display: flex;
+    display: -ms-flexbox;/*IE 10*/
+    text-align: left;
+    font-family: "Poppins";
+}
+.form-row input{
+    min-width: var(--input-width);
+}
+
+#form-container textarea{
+    min-width: var(--input-width);
+    max-width: var(--input-width); 
+    resize: vertical;
+    border-radius: 5px;
+}
+
+@media all and (min-width:500px){
+    #form-container{
+        margin-top: 200px;
+    }
+}
+
+.form-row input {
+    height: 30px;
+    border-radius: 5px;
+}
+
+/**submit button **/
+.form-row button{
+    float: right;
+    height: 40px;
+    font-family: "Poppins";
+    padding: 10px;
+    border: none;
+    line-height: inherit;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: var(--button-bg-color);
+    border-radius: 2px;
+}
+
+
+/** End form styling **/
+
+/** gallery page styling **/
+
+#gallery-container {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-auto-flow: dense;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media all and (min-width: 500px){
+
+    #gallery-container{
+        margin-top: 50px;
+    }
+    #gallery-header{
+        margin-top: 150px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        line-height: 1.2em;
+        font-size: 1.2em;
+        font-family: "Prata",serif;
+    }
+}
+
+#gallery-container div{
+    padding: 0;
+}
+
+#gallery-container img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+
+#gallery-header{
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-family: "Prata",serif;
+}
+
+
+/** End of gallery page styling ** /
+
+
+/** footer styling **/
+
+footer{
+    display: flex;
+    width:100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--footer-color);
+    font-family: "Prata", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer div{
+    display: flex;
+
+}
+
+#copyright-div, #source {
+    align-self: flex-start;
+}
+
+#github{
+    width: 10px;
+}
+
+/** End of footer styling **/ 
+
+
+/** Styling about page **/ 
+
+#about-html-container{
+    margin: 20px auto ;
+    margin-bottom: 200px;
+    padding: 10px 10px;
+    width: 100%;
+    text-align: center;
+    height: 1000px;
+}
+#about-html-container p{
+    text-align: center;
+    font-weight: 400;
+}
+
+@media all and (min-width: 500px) {
+    #about-html-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        row-gap: 10px;
+        column-gap: 50px;
+        padding: 20px;
+        width: 100%;
+        margin-top: 100px;
+    }
+    
+
+    #left-grid-snippet {
+        font-size: 2.6em;
+        text-align: left;
+        font-weight: 600;
+        font-family: "Prata", sans-serif;
+
+    }
+    #right-grid-snippet {
+        padding-top: 10px;
+        font-size: 1.1em;
+        font-family: "Prata", sans-serif;
+
+
+    }
+
+
+}
+
+@media all and (max-width: 600px){
+    #left-grid-snippet {
+        font-size: 1.1em;
+        text-align: left;
+        font-weight: 600;
+        font-family: "Prata", sans-serif;
+
+    }
+    #right-grid-snippet {
+        padding-top: 10px;
+        font-size: 1.1em;
+        font-family: "Prata", sans-serif;
+
+
+    }
+
+}
+
+
+
+/** End of styling about page **/
+
+/** Styling "Get in touch message **/ 
+@media all and (min-width:600px) {
+    #get-in-touch{
+        font-family: "Prata", serif;
+        letter-spacing: 0.2em;
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+}
+
+#get-in-touch{
+    font-family: "Prata", serif;
+
+}
+/** End of styling "Get in touch message **/ 
+
+/* Styling home page */
+
+
+/* Small screen */ 
+#home-page{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 20px auto ;
+    padding: 10px 10px;
+    width: 100%;
+    font-family: "Prata";
+}
+
+/* Large screen */
+@media all and (min-width : 600px){
+    #home-page{
+        margin-top: 200px;
+        display: grid;
+        margin: 20px auto ;
+
+        padding: 25px 25px;
+        font-family: "Prata";
+        grid-template-columns: 2fr 1fr;
+        row-gap: 10px;
+        column-gap: 50px;
+        width: 100%;
+        margin-top: 100px;
+        overflow: scroll;
+        margin-bottom: 40px;
+    }
+   
+    #home-aside{
+        margin-top: 200px;
+        margin-bottom: 40px;
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #home-aside img{
+        width: 30vw;
+    }
+    #photos{
+        width: 200px;
+    }
+    .aside-div{
+        width: 200px;
+    }
+    #home-page p{
+        font-size: 2em;
+        text-align: left;
+        font-weight: 300;
+        font-family: "Prata", sans-serif;
+    }
+
+    
+    #home-page h1{
+        font-size: 3em;
+    }
+}
+
+
+#intro{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+#home-page a:hover{
+    color: chocolate;
+}
+
+.aside-div{
+    padding: 10px;
+    margin-bottom: 40px;
+    display: flex;
+}
+#home-aside h5{
+    text-align: center;
+    font-size: 1.4em;
+
+}
+.aside-img{
+    width: 90vw;
+    border-radius: 5px;
+}
+
+#home-aside{
+    margin-top: 40px;
+}
+
+
+/* End of styling home page */
