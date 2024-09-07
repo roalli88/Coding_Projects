@@ -1,3 +1,17 @@
+/* This part had to be put here because the button doesn't fire when this part
+is in the index.html file. 
+*/
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        document.getElementById('my-button').addEventListener(
+            "click", () => {
+                addImage()
+            }
+        )
+    }
+)
+
+
 /* 
     This function allows images to dynamically added and removed.
 */
