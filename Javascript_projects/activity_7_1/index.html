@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>Calculator</header>
+    <div class="calculator">
+        <div id="result">
+            <!--textarea is better than input for this purpose-->
+            <textarea placeholder="0"  readonly name="" id="display" cols="10" rows="10"></textarea>
+        </div>
+            <button onclick="document.getElementById('display').value=''" 
+                             class="stretcher" id="C" >C</button>
+            <button onclick="readDigitInput('pi')" class="stretcher" id="brackets" >&pi;</button>
+            <button class="stretcher" id="percent" >&percnt;</button>
+            <button onclick="readToken('/')"  class="stretcher" id="div" >/</button>
+            <button onclick="readDigitInput('7')" class="stretcher"  id="seven" >7</button>
+            <button onclick="readDigitInput('8')" class="stretcher"  id="eight" >8</button>
+            <button onclick="readDigitInput('9')" class="stretcher"  id="nine" >9</button>
+            <button onclick="readToken('x')" class="stretcher"  id="cross" >&times;</button>
+            <button onclick="readDigitInput('4')" class="stretcher"  id="four" >4</button>
+            <button onclick="readDigitInput('5')" class="stretcher"  id="five" >5</button>
+            <button onclick="readDigitInput('6')" class="stretcher"  id="six" >6</button>
+            <button onclick="readToken('-')" class="stretcher"  id="minus" >&minus;</button>
+            <button onclick="readDigitInput('1')" class="stretcher"  id="one" >1</button>
+            <button onclick="readDigitInput('2')" class="stretcher"  id="two" >2</button>
+            <button onclick="readDigitInput('3')" class="stretcher"  id="three" >3</button>
+            <button onclick="readToken('+')"  class="stretcher"  id="plus" >&plus;</button>
+            <button onclick="readDigitInput('0')" class="stretcher"  id="zero" >0</button>
+            <button onclick="readToken('.')" class="stretcher"  id="dot" >.</button>
+            <button onclick="readDigitInput('e')" class="stretcher"  id="cancel" >&ExponentialE;</button>
+            <button onclick="equals()" class="stretcher"  id="equals" >=</button>        
+    </div>
+    
+
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>

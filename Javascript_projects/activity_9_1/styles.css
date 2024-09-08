@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+#input-section{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 20px;
+}
+#input-section input{
+    padding: 5px;
+    width: 50%;
+}
+#display-div{
+    width: 200px;
+    margin: 10px auto;
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

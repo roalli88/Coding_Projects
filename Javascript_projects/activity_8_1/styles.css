@@ -1,12 +1,16 @@
 *{
     box-sizing: border-box;
 }
+body{
+    padding: 40px;
+}
 header{
     margin-top: 20px;
     text-align: center;
     height: 40px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 header input{
