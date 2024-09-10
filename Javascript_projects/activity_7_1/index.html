@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>Calculator</header>
+    <header>Basic calculator</header>
     <div class="calculator">
         <div id="result">
             <!--textarea is better than input for this purpose-->
@@ -15,8 +15,8 @@
         </div>
             <button onclick="document.getElementById('display').value=''" 
                              class="stretcher" id="C" >C</button>
-            <button onclick="readDigitInput('pi')" class="stretcher" id="brackets" >&pi;</button>
-            <button class="stretcher" id="percent" >&percnt;</button>
+            <button onclick="readToken('(')"  class="stretcher" id="div" >(</button>
+            <button onclick="readToken(')')"  class="stretcher" id="div" >)</button>
             <button onclick="readToken('/')"  class="stretcher" id="div" >/</button>
             <button onclick="readDigitInput('7')" class="stretcher"  id="seven" >7</button>
             <button onclick="readDigitInput('8')" class="stretcher"  id="eight" >8</button>
@@ -32,8 +32,8 @@
             <button onclick="readToken('+')"  class="stretcher"  id="plus" >&plus;</button>
             <button onclick="readDigitInput('0')" class="stretcher"  id="zero" >0</button>
             <button onclick="readToken('.')" class="stretcher"  id="dot" >.</button>
-            <button onclick="readDigitInput('e')" class="stretcher"  id="cancel" >&ExponentialE;</button>
-            <button onclick="equals()" class="stretcher"  id="equals" >=</button>        
+            <button onclick="readToken('^')" class="stretcher"  id="cancel" >^</button>
+            <button class="stretcher"  id="equals" >=</button>        
     </div>
     
 

@@ -1,7 +1,22 @@
-/* Event listeners - which maybe more maintainable */ 
+/* Event listeners */ 
 
+document.getElementById('equals').addEventListener(
+    "click",
+    () => {
+        let text = document.getElementById('display');
+        let arg = text.value;
+        text.value = '';
+        let ans = eval(arg);
+        if (ans === Infinity) {
+            equals("Undefined")
+        }
+        else{
+            equals(ans);
+        }
+    }
+)
 
-
+/* Reads each button that the user clicks on */
 function readDigitInput(val) {
     let input;
     switch (val) {
@@ -35,12 +50,6 @@ function readDigitInput(val) {
         case '9':
             input = 9;
             break;
-        case 'e':
-            input = Math.E;
-            break;
-        case 'pi':
-            input = Math.PI;
-            break;
         default:
             break;
     }
@@ -68,101 +77,50 @@ function readToken(tok){
             break;   
         case '.':
             token = '.';
+            break;  
+        case '(':
+            token = '(';
             break;   
-        default:
+        case ')':
+            token = ')';
+            break;    
+        case '^':
+            token = '**';
+            break;       
+    default:
             break;
     }
+    // display each token back to the user
     displayInput(token);
 }
 
+//displays the value of each clicked button back to the user.
 function displayInput(val) {
-    let text = document.getElementById('display');
-    text.value += `${val}`
-}
-
-
-function add() {
     
-}
-
-function equals(){
     let text = document.getElementById('display');
-    let temp = text.value;
-    text.value = '';
-    text.value = temp;
+    text.value += `${val}`;
+
+    
+    
 
 }
 
+
+//displays the result to the user.
+function equals(val){
+    let text = document.getElementById('display');
+    text.value = '';
+    text.value = val;
+
+
+
+}
+//clears the input field and resets the value to 0.
 function clear() {
     let text = document.getElementById('display');
     text.value = '';
 }
-let exp = "344+69-89*78/10+0.89989";
-let opRegex = /[\*\+\-\/]/g
-let numRegex = /\d+(\.\d+)?/g
-console.log(exp.match(opRegex));
-console.log(exp.match(numRegex));
-function getPrecedence(char) {
-    let precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
-    return precedence[char];
-}
-
-let isOperator = (val) => "+-/*".includes(val);
-function applyOperator(tok, op1, op2) {
-    switch (tok) {
-        case '+':
-            return op1 + op2;
-        case '-':
-            return op1 - op2; 
-        case '/':
-            return op1 / op2; 
-        case '*':
-            return op1 * op2;  
-        default:
-            return -Infinity;
-    }
-}
-function shuntYard(val){
-    let tot = 0;
-    let operands = []
-    let operators = []
-    for (const iterator of val) {
-        //found a number
-        if (typeof(iterator) === 'number') {
-            // add the number to the list
-            operands.push(iterator)
-          //found an operator
-        } else if (isOperator(iterator)){
-            if (operators.length === 0) {
-                operators.unshift(iterator);
-                console.log(iterator);
-            } else {
-                if (getPrecedence(iterator) <= getPrecedence(operators[0])) {
-                    while (getPrecedence(iterator) <= getPrecedence(operators[0])) {
-                        let op1 = operands.shift();
-                        let op2 = operands.shift();
-                        tot += applyOperator(iterator, op1, op2);
-                        operators.shift();
-                        
-                    }
-                } else {
-                    while (operands.length > 0) {
-                        let op1 = operands.shift();
-                        let op2 = operands.shift();
-                        tot += applyOperator(iterator, op1, op2);
-                        operators.shift();
 
 
-                    }
-                }
-            }
-        }
-        else{
-            continue;
-        }
-    }
-    return tot;
-}
 
-console.log(shuntYard("344 + 69 - 89 * 78"));
 
