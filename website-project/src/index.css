@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#logo {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 3em;
+  font-style: normal;
+}
